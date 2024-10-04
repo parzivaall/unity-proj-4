@@ -9,13 +9,13 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(enemyPrefab, new Vector3(0, 0, 6), Quaternion.identity);
+        Instantiate(enemyPrefab, GenerateLocation(), Quaternion.identity);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Instantiate(enemyPrefab, GenerateLocation(), Quaternion.identity);
+        //Instantiate(enemyPrefab, GenerateLocation(), Quaternion.identity);
     }
 
     private Vector3 GenerateLocation()
