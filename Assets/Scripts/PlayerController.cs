@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+        if (gameObject.transform.position.y < -10){
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
